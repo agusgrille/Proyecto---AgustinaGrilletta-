@@ -53,7 +53,7 @@ html {
     
 }
 h2 { 
-    color:#97dbd1;
+    background-image: linear-gradient(180deg, #a8f38b 0, #93ec90 12.5%, #7de493 25%, #67d996 37.5%, #50cc96 50%, #39bf95 62.5%, #20b495 75%, #00aa95 87.5%, #00a195 100%);
     font-family: 'Signika';
     font-size: 4.8rem;
     line-height: 1.5;
@@ -74,6 +74,7 @@ h2 {
      font-size: 12rem; /* 1 rem : 10px */
      text-align: center;
      font-family: 'Signika';
+     margin-top: auto;
  }
 
  .fuenteMediana {
@@ -83,14 +84,17 @@ h2 {
      line-height: 1.6;
      font-weight: bold;
      color:azure;
+     margin-top: auto;
  }
 
  ul { 
         list-style-type:circle;
         font-family: 'Signika';
-        font-size: 4rem;
-        color:rgb(255, 0, 157);
+        font-size: 5rem;
+        color:rgb(14, 12, 13);
         text-align: left;
+        text-shadow: #97dbd1;
+        
  }
 
  .cursiva {
@@ -102,7 +106,7 @@ h2 {
      font-size: 4rem;
  }
  a {
-     text-decoration: none;
+     text-decoration:dashed;
  }
  #imagen-fondo{
      background-image: url(../img/imagengalaxia.jpg);
@@ -139,8 +143,44 @@ li {
     font-size: 23px;
     
 } 
+/*media*/
+@media (min-width: 768px) {
+    .card1 {
+        width: 60%;
+    }
+    @media (max-width: 767px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "nav"
+          "productos"
+          "publicidad"
+          "servicios"
+          "footer";
+        /* grid-template-rows: 100px 1fr 1fr 75px; 
+        grid-template-columns: 20% auto 15%; */
+        /* row-gap: 50px;
+        column-gap: 50px; */
+        }
+    } 
 
+@media (min-width: 768px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+          "nav header header"
+          "nav productos publicidad"
+          "nav servicios publicidad"
+          "nav footer footer";
+        grid-template-rows: 100px 1fr 1fr 75px; 
+        grid-template-columns: 20% auto 15%;
+        row-gap: 50px;
+        column-gap: 50px;
+     }
+}
 .card1 {
+    display: block;
     background-color: rgb(167, 123, 209);
     width: 50%;
     height: 500px;
@@ -205,8 +245,8 @@ button {
     padding: 1rem;
     position:absolute;
     border-radius: 10px;
-    margin: 0;
-    margin-left: 36%;
+    argin: 15% 20% -36% 40%;   
+    
     
 }
 .text-center {
@@ -291,3 +331,256 @@ form{
     padding: 0;
       
     }
+    
+    /*grid seccion servicios*/
+    
+    #grilla {
+        display: grid;
+        grid-template-areas:
+          "nav header header"
+          "nav productos publicidad"
+          "nav servicios publicidad"
+          "nav footer footer";
+        grid-template-rows: 100px 1fr 1fr 75px; 
+        grid-template-columns: 20% auto 15%;
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+
+    .border {
+        border: 1px solid black;
+    background-image: url(https://i.pinimg.com/originals/06/25/f6/0625f661ba270aac7553f7db742c7b24.jpg);
+     }
+
+     
+     header {
+        grid-area: header;
+     }
+     footer {
+        grid-area: footer;
+     }
+     section#productos {
+        grid-area: productos;     
+     }
+     section#servicios {
+        grid-area: servicios;     
+     }
+     nav {
+        grid-area: nav;
+     }
+     aside {
+        grid-area: publicidad;
+     }
+/* GRID HIJOS */
+#Servicios {
+    display: grid;
+    justify-items: stretch; /* start | end | center | stretch */
+    align-items: stretch; /* start | end | center | stretch */
+    width: 95%;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-template-rows: 100px 100px;
+    grid-row-gap: 10px;
+    height: 100vh;
+    /*justify-content: center /*starr | end | center | space-between | space-around | space-evenly*/;
+    /*align-content: center /*starr | end | center | space-between | space-around | space-evenly*/;
+  }
+
+  #padre div {
+    border: solid 1px;
+    font-size: 21px;
+    padding: 5px;
+
+  }
+
+  .hijo-self {
+      justify-self: start;
+  }
+  
+  #servicios{
+    
+    text-align: justify;
+  }
+
+/*GRID INDEX*/
+#index {
+    display: grid;
+    grid-template-areas:
+      "nav header header"
+      "nav productos publicidad"
+      "nav servicios publicidad"
+      "nav footer footer";
+      grid-template-rows: 255px 1fr 1 fr -3px;
+      grid-template-columns: 15% auto 15%;
+    column-gap: 50px;
+}
+.border {
+    border: 1px solid black;
+background-image: url(https://i.pinimg.com/originals/06/25/f6/0625f661ba270aac7553f7db742c7b24.jpg);
+ }
+
+ 
+ header {
+    grid-area: header;
+ }
+ footer {
+    grid-area: footer;
+ }
+ section#productos {
+    grid-area: productos;     
+ }
+ section#servicios {
+    grid-area: servicios;     
+ }
+ nav {
+    grid-area: nav;
+ }
+ aside {
+    grid-area: publicidad;
+ }
+/* GRID HIJOS */
+#index-hijos {
+display: grid;
+justify-items: stretch; /* start | end | center | stretch */
+align-items: stretch; /* start | end | center | stretch */
+width: 95%;
+grid-template-columns: auto auto;
+grid-column-gap: 10px;
+grid-template-rows: 100px 100px;
+grid-row-gap: 10px;
+height: 100vh;
+/*justify-content: center /*starr | end | center | space-between | space-around | space-evenly*/;
+/*align-content: center /*starr | end | center | space-between | space-around | space-evenly*/;
+}
+
+#padre div {
+border: solid 1px;
+font-size: 21px;
+padding: 5px;
+
+}
+
+.hijo-self {
+  justify-self: start;
+}
+
+#servicios{
+
+text-align: justify;
+}
+#mapa{
+    width: 100%;
+    height: 45%;
+    border: none;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: relative;
+
+}
+  
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*grid productos*/
+.productos  {
+    #index {
+        display: grid;
+        grid-template-areas:
+          "nav header header"
+          "nav productos publicidad"
+          "nav servicios publicidad"
+          "nav footer footer";
+          grid-template-rows: 255px 1fr 1 fr -3px;
+          grid-template-columns: 15% auto 15%;
+        column-gap: 50px;
+}
+
+.producto-1 {
+  
+  width: 200px;
+  height: 200px;
+  
+}
+.producto-2 {
+  
+    justify-self: stretch; /*Horizontal 100%*/
+    align-self: stretch; /*Vertical 100%*/
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    min-width: auto;
+    min-height: auto;
+  
+}
+
+.producto-3{
+  
+   
+    justify-self: stretch; //Horizontal 100%
+    align-self: stretch]; //Vertical 100%
+  
+   /*flex*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    min-width: auto;
+    min-height: auto;
+  
+}
+
+#Contacto {
+    display: grid;
+    grid-template-areas:
+    "nav-header-header"
+    "nav-productos-publicidad"
+    "nav-servicios-footer"
+    "nav-footer-footer"
+;
+grid-template-rows:100px 1fr 1fr 50px ;
+grid-template-columns: 30% auto 15%;
+row-gap: 50px;
+column-gap: 50px;
+}
+
+header {
+    grid-area: header;
+ }
+ footer {
+    grid-area: footer;
+ }
+ section#productos {
+    grid-area: productos;     
+ }
+ section#servicios {
+    grid-area: servicios;     
+ }
+ nav {
+    grid-area: nav;
+ }
+ aside {
+    grid-area: publicidad;
+ }
+ /* grid hijos contacto */ 
+ .contacto-hijos {
+     display:grid;
+     justify-items:center ;
+     align-items:center ;
+    width: 95%;
+     grid-template-column:50%;
+     column-gap:auto auto;
+     rows:10px ;
+     row-gap:10px;
+     height:100vh;
+ }  
