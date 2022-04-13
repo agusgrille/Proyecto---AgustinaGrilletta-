@@ -5,6 +5,13 @@ h3 {
     text-shadow: 2px 2px;
     text-align: center;
 }
+
+body {
+    background:linear-gradient(#da7ed2, #3f87a6); 
+    background-size: cover;
+    margin:0;
+    padding: 0;
+}
 .seccionServicios {
     display: block;
     font-family: 'Signika';
@@ -53,7 +60,7 @@ html {
     
 }
 h2 { 
-    background-image: linear-gradient(180deg, #a8f38b 0, #93ec90 12.5%, #7de493 25%, #67d996 37.5%, #50cc96 50%, #39bf95 62.5%, #20b495 75%, #00aa95 87.5%, #00a195 100%);
+    background-image: linear-gradient(180deg, #8b92f3 0, #762b99 12.5%, #11214e75 25%, #69235a 37.5%, #612e52 50%, #521385 62.5%, #3d0829 75%, #5f062f 87.5%, #440616 100%);
     font-family: 'Signika';
     font-size: 4.8rem;
     line-height: 1.5;
@@ -65,8 +72,8 @@ h2 {
     
 }
  section div {
-    background-image: url(https://i.pinimg.com/originals/06/25/f6/0625f661ba270aac7553f7db742c7b24.jpg);
-     
+    background: linear-gradient(#da7ed2, #3f87a6);
+    
  }
 
 
@@ -125,7 +132,7 @@ h2 {
     color: rgba(14, 0, 78, 0.479);
     Margin: 15px 50px 18px 30px;
 /* propiedades decorativas */
-    border: solid 1px black;
+    border: solid 2px rgb(126, 5, 90);
     padding: 5px;
     display: inline-block; 
     transform: translate(15% 10%);
@@ -245,10 +252,15 @@ button {
     padding: 1rem;
     position:absolute;
     border-radius: 10px;
-    argin: 15% 20% -36% 40%;   
-    
-    
+    margin:2% 2% 3% 40%; 
+    width: 50px; height: 50px;
+    transition: all 2s;       
 }
+ button:focus {
+    width: 90px;
+    font-size: 15px;
+ }
+  
 .text-center {
     text-align: center;
     font-family: 'Signika Negative';
@@ -349,7 +361,8 @@ form{
 
     .border {
         border: 1px solid black;
-    background-image: url(https://i.pinimg.com/originals/06/25/f6/0625f661ba270aac7553f7db742c7b24.jpg);
+        background: linear-gradient(#da7ed2, #3f87a6);
+
      }
 
      
@@ -416,7 +429,7 @@ form{
 }
 .border {
     border: 1px solid black;
-background-image: url(https://i.pinimg.com/originals/06/25/f6/0625f661ba270aac7553f7db742c7b24.jpg);
+    background: linear-gradient(#da7ed2, #3f87a6);
  }
 
  
@@ -584,3 +597,11 @@ header {
      row-gap:10px;
      height:100vh;
  }  
+ div {
+    width: 100px;
+    height: 100px;
+    transition: height 2s, width 1s;       
+ }
+ div:hover {
+    height: 200px; width: 200px;
+ }
